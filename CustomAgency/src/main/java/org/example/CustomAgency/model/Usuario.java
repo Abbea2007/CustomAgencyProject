@@ -3,6 +3,7 @@ package org.example.CustomAgency.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.openxava.annotations.DescriptionsList;
 import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.Required;
 
@@ -21,7 +22,7 @@ public class Usuario extends EntidadAuditable {
             , initialValue = 1)
 
     @GeneratedValue(strategy = GenerationType.SEQUENCE
-            , generator = "facultadseq")
+            , generator = "usuarioseq")
 
     @Id
     @Column(name = "id")
@@ -37,7 +38,10 @@ public class Usuario extends EntidadAuditable {
 
     private boolean activo = true;
 
-    //Cuando cree la entidad sucursal voy a establecer la relacion ManyToOne aqui
+    @ManyToOne(fetch = FetchType.LAZY)
+    @DescriptionsList
+    private Sucursal sucursal;
+
 
 
 
