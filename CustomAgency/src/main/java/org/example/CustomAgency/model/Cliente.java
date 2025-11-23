@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Cliente extends BaseEntity{
-    
+
     @Required
     private String nombre_cliente;
 
