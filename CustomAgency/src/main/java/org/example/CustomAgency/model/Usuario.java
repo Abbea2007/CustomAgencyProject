@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.openxava.annotations.DescriptionsList;
 import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 
 import javax.persistence.*;
 
@@ -13,21 +14,14 @@ import javax.persistence.*;
 @Table(name = "Usuarios")
 @Getter
 @Setter
+@View(members =
+    "username;" +
+    "nombre;" +
+    "email;" +
+    "activo;" +
+    "sucursal;")
+public class Usuario extends BaseEntity {
 
-public class Usuario extends EntidadAuditable {
-
-    @SequenceGenerator(name = "usuarioseq"
-            , sequenceName = "usuarioseq"
-            ,   allocationSize = 1
-            , initialValue = 1)
-
-    @GeneratedValue(strategy = GenerationType.SEQUENCE
-            , generator = "usuarioseq")
-
-    @Id
-    @Column(name = "id")
-    @ReadOnly
-    private int id;
 
     @Required
     private String username;
@@ -39,7 +33,7 @@ public class Usuario extends EntidadAuditable {
     private boolean activo = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @DescriptionsList
+    @DescriptionsList(descriptionProperties = "nombre")
     private Sucursal sucursal;
 
 

@@ -4,13 +4,21 @@ import lombok.Getter;
 import lombok.Setter;
 import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "Cliente")
 @Getter
 @Setter
+@View(members =
+    "nombre_cliente;" +
+    "ruc;" +
+    "email;" +
+    "telefono;" +
+    "direccion;"
+)
 public class Cliente extends BaseEntity{
 
     @Required

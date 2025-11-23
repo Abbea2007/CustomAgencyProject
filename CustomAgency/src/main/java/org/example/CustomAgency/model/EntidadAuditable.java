@@ -1,6 +1,10 @@
 package org.example.CustomAgency.model;
 
-public class EntidadAuditable {
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public class EntidadAuditable extends BaseEntity {
 
 
 
