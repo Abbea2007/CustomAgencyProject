@@ -11,13 +11,7 @@ import javax.persistence.*;
 @Table(name = "cliente")
 @Getter
 @Setter
-public class Cliente {
-    @SequenceGenerator( name = "clienteseq"
-            ,sequenceName = "clienteseq"
-            , allocationSize = 1
-            , initialValue = 1)
-
-    @Id
+public class Cliente extends BaseEntity{
     @Column(name = "id")
     @ReadOnly
     private Integer id;
