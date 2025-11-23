@@ -8,10 +8,10 @@ import org.openxava.util.*;
  * With OpenXava Studio/Eclipse: Right mouse button > Run As > Java Application
  */
 
-public class CustomAgency {
+public class Main {
 
 	public static void main(String[] args) throws Exception {
-		DBServer.start("CustomAgency-db"); // To use your own database comment this line and configure src/main/webapp/META-INF/context.xml
+		//DBServer.start("CustomAgency-db"); // To use your own database comment this line and configure src/main/webapp/META-INF/context.xml
 		AppServer.run("CustomAgency"); // Use AppServer.run("") to run in root context
 	}
 
