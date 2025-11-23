@@ -36,4 +36,8 @@ public class Cliente extends BaseEntity{
     @Required
     private String direccion;
 
+    @Required
+    @Enumerated(EnumType.STRING)
+    private Estado estado;
+
 }

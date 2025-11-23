@@ -30,11 +30,16 @@ public class Usuario extends BaseEntity {
     private String nombre;
     private String email;
 
-    private boolean activo = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @DescriptionsList(descriptionProperties = "nombre")
     private Sucursal sucursal;
+
+    @Required
+    @Enumerated(EnumType.STRING)
+    private Estado estado;
+
+
 
 
 
