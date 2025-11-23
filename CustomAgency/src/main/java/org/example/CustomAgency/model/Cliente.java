@@ -12,10 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Cliente extends BaseEntity{
-    @Column(name = "id")
-    @ReadOnly
-    private Integer id;
-
+    
     @Required
     private String nombre_cliente;
 
