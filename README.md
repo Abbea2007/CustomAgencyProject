@@ -1,4 +1,4 @@
-##📄 Descripción del Proyecto — Sistema de Gestión Aduanera Customs Agency
+📄 Descripción del Proyecto — Sistema de Gestión Aduanera Customs Agency
 
 Este proyecto consiste en el diseño y desarrollo de una base de datos relacional y su correspondiente implementación mediante un sistema web construido con Java + OpenXava, orientado a la gestión integral de operaciones en una agencia aduanera nicaragüense.
 
