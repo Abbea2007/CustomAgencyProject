@@ -23,7 +23,7 @@ public class YourFirstEntity extends Identifiable {
 	String description;
 	
 	LocalDate date;
-	
+	Integer id_sucursal;
 	BigDecimal amount;
     
     //hago un commit de prueba
