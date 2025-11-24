@@ -11,14 +11,14 @@ import org.openxava.annotations.View;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "usuario")
 @Getter
 @Setter
 @View(members =
     "username;" +
     "nombre;" +
     "email;" +
-    "activo;" +
+    "estado;" +
     "sucursal;")
 public class Usuario extends BaseEntity {
 
@@ -32,6 +32,7 @@ public class Usuario extends BaseEntity {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sucursal_id")
     @DescriptionsList(descriptionProperties = "nombre")
     private Sucursal sucursal;
 

@@ -7,7 +7,7 @@ import org.openxava.annotations.View;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Roles")
+@Table(name = "rol")
 @Getter
 @Setter
 @View(members =

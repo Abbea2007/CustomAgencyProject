@@ -9,15 +9,17 @@ import org.openxava.annotations.View;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "cliente")
 @Getter
 @Setter
 @View(members =
-    "nombre_cliente;" +
-    "ruc;" +
+    "direccion;" +
     "email;" +
+    "nombre_cliente ;" +
+    "ruc;" +
     "telefono;" +
-    "direccion;"
+    "estado;"
+
 )
 public class Cliente extends BaseEntity{
 

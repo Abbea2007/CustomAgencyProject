@@ -10,7 +10,7 @@ import org.openxava.annotations.View;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UsuariosRoles",
+@Table(name = "usuariorol",
 uniqueConstraints = @UniqueConstraint(columnNames = {"id_usuario", "id_rol"}))
 
 

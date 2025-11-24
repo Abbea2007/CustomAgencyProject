@@ -22,7 +22,7 @@ public class BaseEntity {
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(length = 36)
     @Hidden
-    private String id;
+    private Long id;
 
 
 }

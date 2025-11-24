@@ -9,7 +9,7 @@ import org.openxava.annotations.View;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Sucursal")
+@Table(name = "sucursal")
 @Getter
 @Setter
 @View(members =
